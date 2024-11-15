@@ -1,11 +1,11 @@
-export function formatToWon(price: Number): string {
+export function formatToWon(price: number): string {
   return price.toLocaleString("ko-KR");
 }
 
 export function formatToTimeAgo(date: number): string {
   // 1분(60초)를 밀리초로 변환
   const countdownEndTime = new Date().getTime() + date;
-  var total = "";
+  let total = "";
   const now = new Date().getTime();
   const timeDifference = countdownEndTime - now;
   // console.log(timeDifference);

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { InitialPosts } from "@/app/(tabs)/home/page";
 import ListProduct from "./list-post";
 
@@ -8,11 +8,11 @@ interface PostListProps {
   initialPosts: InitialPosts[];
 }
 export default function ProductList({ initialPosts }: PostListProps) {
-  const [posts, setPosts] = useState(initialPosts);
-  const [isLoading, setIsLoading] = useState(false);
-  const [page, setPage] = useState(0);
-  const [isLastPage, setIsLastPage] = useState(false);
-  const trigger = useRef<HTMLSpanElement>(null);
+  const [posts, setPosts] = useState(initialPosts); // eslint-disable-line
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [page, setPage] = useState(0);
+  // const [isLastPage, setIsLastPage] = useState(false);
+  // const trigger = useRef<HTMLSpanElement>(null);
   //   useEffect(() => {
   //     const observer = new IntersectionObserver(
   //       async (

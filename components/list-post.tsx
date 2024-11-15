@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { formatToTimeAgo, formatToWon } from "@/lib/utils";
 import { useState, useEffect } from "react";
 
@@ -19,7 +18,7 @@ export default function ListProduct({
   id,
 }: ListProductProps) {
   const [timeAgo, setTimeAgo] = useState<string>(formatToTimeAgo(created_at));
-  const [countdownDuration, setCountdownDuration] = useState(created_at);
+  const [countdownDuration, setCountdownDuration] = useState(created_at); // eslint-disable-line
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,7 +34,7 @@ export default function ListProduct({
   return (
     <Link href={`/products/${id}`} className="flex gap-5">
       <div className="relative size-20 rounded-md overflow-hidden">
-        <Image src={photo} alt={title} className="object-cover" />
+        <img src={photo} alt={title} className="object-cover" />
       </div>
       <div className="flex flex-col gap-1 *:text-white">
         <span className="text-lg">{title}</span>
